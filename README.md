@@ -1,18 +1,18 @@
 
 ## ipid
-Interplanetary Identifiers -  Implementation of the DID ( decentralized identifiers) specification over the IPFS (Interplanetary File System) network. 
+Interplanetary Identifiers (ipid) -  Implementation of the DID ( decentralized identifiers) specification over the IPFS (Interplanetary File System) network. 
 
 
-## needs 
+## Functional Requirements 
 
-Save the DDO onto IPNS
+Save the DDO onto IPNS (Interplanetary Name Service)
 - given the IPNS is a permissioned filestore 
 
 DID syntax (globally unique cryptographically verifiable identifiers)
 
 did:sov:3k9dg356wdcj5gf2k9bw9kfg7a
 
-![alt did example](did.png "did example from sovrin")
+![alt did example](https://ipfs.io/ipfs/QmYEgzjp4K1ZBXZ4y6VDQKCnUsTgdoatA31f6HnpLsXi1E "did example from sovrin")
 
 instead for ipid: 
 
