@@ -10,13 +10,12 @@ Save the DDO onto IPNS (Interplanetary Name Service)
 
 DID syntax (globally unique cryptographically verifiable identifiers)
 
-did:sov:3k9dg356wdcj5gf2k9bw9kfg7a
-
 ![alt did example](https://ipfs.io/ipfs/QmYEgzjp4K1ZBXZ4y6VDQKCnUsTgdoatA31f6HnpLsXi1E "did example from sovrin")
 
 instead for ipid: 
 
-did:ipid:QmeJGfbW6bhapSfyjV5kDq5wt3h2g46Pwj15pJBVvy7jM3
+![alt did example](https://ipfs.io/ipfs/QmUcX32r44k3KJ1PMtQD3YqRfvqHHrEEiogmnEGstUEjA6 "did example from ipid")
+
 
 *where* 
 - ipid represents the method spec 
