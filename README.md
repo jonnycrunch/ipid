@@ -1,27 +1,34 @@
 
 ## ipid
 Interplanetary Identifiers (ipid) -  Implementation of the DID ( decentralized identifiers) specification over the IPFS (Interplanetary File System) network. 
-
+_by Jonathan Holt_
 
 ## Functional Requirements 
 
 Save the DDO onto IPNS (Interplanetary Name Service)
-- given the IPNS is a permissioned filestore 
+- IPNS is a permissioned distributed hash table that resolves to ipfs resources
+- cryptographically secure namespace resolution
+
+
+**The Inter-Planetary Naming System (IPNS)**
+
+ipns is a way to add a small amount of mutability to the permanent immutability that is ipfs. It allows you to store a reference to an ipfs hash under the namespace of your peerID ( the hash of your public key ). The commands to set it up are quite simple.
+
+First, you'll need some content to publish:
 
 DID syntax (globally unique cryptographically verifiable identifiers)
 
-![alt did example](https://ipfs.io/ipfs/QmYEgzjp4K1ZBXZ4y6VDQKCnUsTgdoatA31f6HnpLsXi1E "did example from sovrin")
+![alt did example using sovrin method specification](https://ipfs.io/ipfs/QmYEgzjp4K1ZBXZ4y6VDQKCnUsTgdoatA31f6HnpLsXi1E "did example from sovrin")
 
 instead for ipid: 
 
-![alt did example](https://ipfs.io/ipfs/QmUcX32r44k3KJ1PMtQD3YqRfvqHHrEEiogmnEGstUEjA6 "did example from ipid")
+![alt did example using ipid method specification](https://ipfs.io/ipfs/QmUcX32r44k3KJ1PMtQD3YqRfvqHHrEEiogmnEGstUEjA6 "did example from ipid")
 
 
 *where* 
 - ipid represents the method spec 
 - 'QmeJGfbW6bhapSfyjV5kDq5wt3h2g46Pwj15pJBVvy7jM3' represents the IPNS (Interplanetary Name Space) which is a base58 hash that resolves to the IPFS hash of the DDO 
  
-
 
 ## sample DDO used by sovrin.org:
 ```
@@ -57,7 +64,7 @@ instead for ipid:
 }}
 ```
 
-- "@context is JSON-LD for linking the semantic interoperability"
+_"@context is JSON-LD for linking attributes solving semantic interoperability"_
 
 
 ## sample DDO stored using did method spec stored on ipid:  
@@ -96,3 +103,56 @@ instead for ipid:
 ```
 
 
+## sample verifiable claim that references a did used for prooving physician credentials:  
+```
+{
+   "@context": "/ipfs/QmfS56jDfrXNaS6Xcsp3RJiXd2wyY7smeEAwyTAnL1RhEG",
+   "id": "did:ipid:QmbFuwbp7yFDTMX6t8HGcEiy3iHhfvng89A19naCYGKEBj",
+   "type": [
+       "Credential",
+       "ProofOfLicenseCredential"
+   ],
+   "issuer": "did:ipid:QmbFuwbp7yFDTMX6t8HGcEiy3iHhfvng89A19naCYGKEBj",
+   "issued": "2017-09-23",
+   "claim": {
+       "id": "did:method:QmbFuwbp7yFDTMX6t8HGcEiy3iHhfvng89A19naCYGKEBj",
+       "LicenseCode": 4004, 
+       "proof" : "did:eth:0xd3382e07f2173270ef43817ab1b4e1cdeb36f23b"
+   },
+   "signature": {
+       "type": "RsaSignature2016",
+       "created": "2017-09-23T21:19:10Z",
+       "creator": "did:ipid:QmbFuwbp7yFDTMX6t8HGcEiy3iHhfvng89A19naCYGKEBj",
+       "nonce": "598c63d6",
+       "signatureValue": "IOmA4R7TfhkYTYW87z640O3GYFldw0yqie9Wl1kZ5OBYNAKOwG5uOsPRK8/2C4STOWF+83cMcbZ3CBMq2/gi25s="
+   }
+}
+
+```
+
+## sample verifiable claim that references a did used for prooving a Vaccination:  
+```
+{
+   "@context": "/ipfs/QmfS56jDfrXNaS6Xcsp3RJiXd2wyY7smeEAwyTAnL1RhEG",
+   "id": "did:ipid:QmbFuwbp7yFDTMX6t8HGcEiy3iHhfvng89A19naCYGKEBj",
+   "type": [
+       "Credential",
+       "ProofOfVaccinationCredential"
+   ],
+   "issuer": "did:ipid:QmbFuwbp7yFDTMX6t8HGcEiy3iHhfvng89A19naCYGKEBj",
+   "issued": "2017-09-23",
+   "claim": {
+       "id": "did:method:QmbFuwbp7yFDTMX6t8HGcEiy3iHhfvng89A19naCYGKEBj",
+       "VacinationCode": 123, 
+       "proof" : "did:eth:0xd3382e07f2173270ef43817ab1b4e1cdeb36f23b"
+   },
+   {
+   "signature": {
+       "type": "RsaSignature2016",
+       "created": "2017-09-23T21:19:10Z",
+       "creator": "did:ipid:QmbFuwbp7yFDTMX6t8HGcEiy3iHhfvng89A19naCYGKEBj",
+       "nonce": "598c63d6",
+       "signatureValue": "IOmA4R7TfhkYTYW87z640O3GYFldw0yqie9Wl1kZ5OBYNAKOwG5uOsPRK8/2C4STOWF+83cMcbZ3CBMq2/gi25s="
+   }
+}
+```
