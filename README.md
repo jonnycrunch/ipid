@@ -1,8 +1,8 @@
 
 ## ipid
-Interplanetary Identifiers (ipid) -  Implementation of the DID ( decentralized identifiers) specification over the IPFS (Interplanetary File System) network. 
+**Interplanetary Identifiers (ipid)** -  Implementation of the DID ( decentralized identifiers) specification over the IPFS (Interplanetary File System) network using IPNS (Interplanetary Name Service). 
 
-_by Jonathan Holt, Founder TranSendX_
+**_by Jonathan Holt, Founder TranSendX_**
 
 [IPFS](https://ipfs.io)  is a peer-to-peer distributed file system that seeks to connect all computing devices with the same system of files. 
 [IPNS](https://github.com/ipfs/faq/issues/16) is a mutable namespace resolution over the distributed hash table that is control by the peerID and associated private key.
@@ -41,6 +41,15 @@ instead for ipid:
 - ipid represents the method spec 
 - 'QmeJGfbW6bhapSfyjV5kDq5wt3h2g46Pwj15pJBVvy7jM3' represents the IPNS (Interplanetary Name Space) which is a base58 hash that resolves to the IPFS hash of the DDO 
  
+
+## Using IPNS ## 
+
+>$ # to add a DID document to IPNS, publish it to your peer id 
+>$ echo "< DID Document text >" | ipfs add 
+>$ <HASH>
+>$ ipfs name publish <HASH>
+
+
 
 ## sample DDO used by sovrin.org:
 ```
@@ -168,3 +177,9 @@ _"@context is JSON-LD for linking attributes solving semantic interoperability"_
    }
 }
 ```
+
+
+## References
+
+1. [IPFS white paper](https://github.com/ipfs/papers/raw/master/ipfs-cap2pfs/ipfs-p2p-file-system.pdf) Juan Benet (protocol labs).
+2. [Sovrin](http://sovrin.org)
