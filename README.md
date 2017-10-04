@@ -44,10 +44,10 @@ instead for ipid:
 
 ## Using IPNS ## 
 
->$ # to add a DID document to IPNS, publish it to your peer id \n
->$ echo "< DID Document text >" | ipfs add \n
->$ <HASH> \n
->$ ipfs name publish <HASH> \n
+>\$ # to add a DID document to IPNS, publish it to your peer id 
+>\$ echo "< DID Document text >" | ipfs add 
+>\$ <HASH> 
+>\$ ipfs name publish <HASH>
 
 
 
