@@ -1,7 +1,7 @@
 
 ## ipid
 Interplanetary Identifiers (ipid) -  Implementation of the DID ( decentralized identifiers) specification over the IPFS (Interplanetary File System) network. 
-_by Jonathan Holt_
+_by Jonathan Holt, Founder TranSendX_
 
 ## Functional Requirements 
 
