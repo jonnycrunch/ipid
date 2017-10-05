@@ -1,16 +1,16 @@
 
-## ipid
-**Interplanetary Identifiers (ipid)** -  Implementation of the DID ( decentralized identifiers) specification over the IPFS (Interplanetary File System) network using IPNS (Interplanetary Name Service). 
+## IPID Interplanetary Identifiers 
+**(ipid)** is and implementation of the DID (decentralized identifiers) specification over the IPFS (Interplanetary File System) network using the IPNS (Interplanetary Name Service) cryptographic namespace resolution service. 
 
 **_by Jonathan Holt, Founder TranSendX_**
 
 [IPFS](https://ipfs.io)  is a peer-to-peer distributed file system that seeks to connect all computing devices with the same system of files. 
-[IPNS](https://github.com/ipfs/faq/issues/16) is a mutable namespace resolution over the distributed hash table that is control by the peerID and associated private key.
+[IPNS](https://github.com/ipfs/faq/issues/16) is a mutable namespace resolution over the distributed hash table that is control by the peerID and associated public key.
 
-While IPFS and IPNS are not specifically designed for the creation and management of decentralized identifiers (DIDs) and the associated DDO it can easily used for this purpose. 
+While IPFS and IPNS are not specifically designed for the creation and management of decentralized identifiers (DIDs) and the associated DDO/DID Document it can easily used for this purpose. 
 
-The ipid method of the DID specification built on top of IPFS and IPNS is a truly self-sovereign identifiers that may be used by people, organizations, and digital devices to establish a cryptographic identifier and associated distributed public key infrastructure that is truly under their control and does not require a third party agent.
-
+The ipid method of the DID specification built on top of IPFS and IPNS is a truly self-sovereign identifiers that may be used by people, organizations, and digital devices to establish a cryptographic identifier and associated distributed public key infrastructure that is truly under their control and does not require a third party agent to resolve.
+Updating the DDO could be done manually by updating the DDO/DID Document and re-publishing to the IPNS namespace controlled by the public key. 
 
 ## Functional Requirements 
 
@@ -18,7 +18,11 @@ Save the DDO onto IPNS (Interplanetary Name Service)
 - IPNS is a permissioned distributed hash table that resolves to a ipfs resource
 - cryptographically secure namespace resolution, in this case of a DID document
 
-## DID Specification
+## DEMO
+
+[Presentation](https://youtu.be/nAoheXEXckQ) on IPID method spec from the Rebooting the Web of Trust conference in Cambridge, MA on October 4th, 2017.  
+
+## DID Method Specification
 
 [DIDs (decentralized identifiers)](https://w3c-ccg.github.io/did-spec/) are a new type of identifier intended for verifiable digital identity that is "self-sovereign", i.e., fully under the control of the identity owner and not dependent on a centralized registry, identity provider, or certificate authority. DIDs resolve to DDOs (DID descriptor objects)—simple JSON documents that contain all the metadata needed to prove ownership and control of a DID. Specifically, a DDO contains a set of key descriptions, which are machine-readable descriptions of the identity owner’s public keys, and a set of service endpoints, which are resource pointers necessary to initiate trusted interactions with the identity owner. Each DID uses a specific DID method, defined in a separate DID method specification, to define how the DID is registered, resolved, updated, and revoked on a specific distributed ledger or network.
 
@@ -178,6 +182,10 @@ _"@context is JSON-LD for linking attributes solving semantic interoperability"_
    }
 }
 ```
+
+## DID universal resolver
+
+[link](https://www.github.com/) **Discussed at the RebootingWebofTrust conference** 
 
 
 ## References
