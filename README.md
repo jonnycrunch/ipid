@@ -20,7 +20,7 @@ Save the DDO onto IPNS (Interplanetary Name Service)
 
 ## DEMO
 
-[[Presentation from Rebooting Web of Trust](https://img.youtube.com/vi/nAoheXEXckQ/0.jpg)]
+[![Presentation from Rebooting Web of Trust](https://img.youtube.com/vi/nAoheXEXckQ/0.jpg)]
 (https://www.youtube.com/watch?v=nAoheXEXckQ)]
 
 
