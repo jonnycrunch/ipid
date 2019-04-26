@@ -20,7 +20,7 @@ Save the DDO onto IPNS (Interplanetary Name Service)
 
 ## DEMO
 
-[Presentation](https://ipfs.io/ipfs/QmRZe5BbrKwY44cFdnN9JKxeKJvdjTUg4RngcDZ5BVbyJp) on IPID method spec from the Rebooting the Web of Trust conference in Cambridge, MA on October 4th, 2017.  
+[Presentation](https://ipfs.io/ipfs/Qmcu6UN6UZwZfCoe9UxCjQNMzjCHGDwb5HPxXiUWibfhRK) on IPID method spec from the Rebooting the Web of Trust conference in Cambridge, MA on October 4th, 2017.  
 
 [![Presentation from Rebooting Web of Trust](https://img.youtube.com/vi/nAoheXEXckQ/0.jpg)](https://www.youtube.com/watch?v=nAoheXEXckQ "Presentation from Reboot Web of Trust")
 
